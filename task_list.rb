@@ -15,17 +15,18 @@ end
 while opcao != 0 do
 
 	opcao = menu()
-	tarefa = ""
+	tarefas = []
 
 	system('clear')
 
   	if opcao == 1
     	print 'Digite sua tarefa: '
-    	tarefa = gets.chomp.to_s
+    	tarefas << gets.chomp.to_s
     	puts
-    	puts 'Tarefa cadastrada: ' + tarefa
+    	puts 'Tarefa cadastrada: ' + tarefas.last
   	elsif opcao == 2
-    	puts "\nTarefa: " + tarefa
+      puts "Tarefas: "
+    	puts tarefas
     elsif opcao == 0
     	puts
     	puts 'Até logo!'
